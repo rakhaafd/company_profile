@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMKN 7 Semarang</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body class="bg-gray-100 font-sans">
+      <!-- Navbar -->
+    <header class="bg-white shadow sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-600">SMKN 7 Semarang</div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#about" class="text-gray-600 hover:text-blue-500 transition">About</a>
+                <a href="#jurusan" class="text-gray-600 hover:text-blue-500 transition">Jurusan</a>
+                <a href="#lookbook" class="text-gray-600 hover:text-blue-500 transition">Lookbook</a>
+                <a href="#testimoni" class="text-gray-600 hover:text-blue-500 transition">Testimoni</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-500 transition">Contact</a>
+            </nav>
+            <button class="md:hidden text-gray-600 focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <i class="fas fa-2x" :class="menuOpen ? 'fa-times' : 'fa-bars'"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <nav class="flex flex-col items-center py-4 space-y-2">
+                <a href="#about" class="text-gray-600 hover:text-blue-500 transition">About</a>
+                <a href="#jurusan" class="text-gray-600 hover:text-blue-500 transition">Jurusan</a>
+                <a href="#lookbook" class="text-gray-600 hover:text-blue-500 transition">Lookbook</a>
+                <a href="#testimoni" class="text-gray-600 hover:text-blue-500 transition">Testimoni</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-500 transition">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section with Background Image -->
+    <section class="hero relative bg-cover bg-center py-20"
+        style="background-image: url('https://cdn-sdotid.adg.id/images/a08a54a4-0e94-45f9-af3a-613db3c755fc_980x382.webp.jpeg')">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-500/70 to-indigo-600/70"></div>
+        <div class="container mx-auto px-20 text-center relative z-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-8">Welcome to SMKN 7 Semarang 🏫</h1>
+            <p class="text-lg md:text-xl text-white mb-8">SMK Negeri 7 Semarang adalah sekolah kejuruan yang berfokus
+                pada pembentukan generasi profesional, siap kerja, dan berkarakter. Dengan kurikulum berbasis industri
+                dan lingkungan belajar yang inspiratif, kami siap mengantarkan siswa menuju masa depan gemilang. ✨</p>
+            <a class="bg-yellow-400 text-gray-800 px-6 py-3 rounded-full font-semibold hover:bg-yellow-500 transition"
+                href="#contact">Get in Touch 🚀</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-8">Tentang SMKN 7 Semarang</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="order-2 md:order-1">
+                    <img src="assets/img/drone.png" alt="SMKN 7 Semarang Campus" class="w-full md:max-w-2xl h-80 md:h-80 object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                </div>
+                <div class="order-1 md:order-2">
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-4">Sekolah Vokasi Unggulan di Jawa Tengah</h3>
+                    <p class="text-gray-600 mb-4">SMKN 7 Semarang adalah pusat pendidikan kejuruan terkemuka yang berkomitmen mencetak lulusan siap kerja dan berdaya saing global. Dengan fasilitas modern, kurikulum berbasis industri, dan tenaga pengajar berpengalaman, kami menawarkan pengalaman belajar yang inspiratif dan praktis.</p>
+                    <p class="text-gray-600 mb-6">Bergabunglah dengan kami untuk mengembangkan keterampilan teknis dan karakter unggul, siap menghadapi tantangan dunia kerja di era industri 4.0!</p>
+                    <a href="#contact" class="inline-block bg-blue-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-600 transition duration-300">Pelajari Lebih Lanjut</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jurusan Section -->
+    <section id="jurusan" class="bg-white py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-gray-800 text-center mb-8">Program Studi SMKN 7 Semarang</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center hover:shadow-lg transition">
+                    <i class="fas fa-laptop-code text-4xl text-blue-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Sistem Informasi, Jaringan, dan Aplikasi</h3>
+                    <h5 class="text-md font-bold text-gray-500 mb-3">(4 Tahun)</h5>
+                    <p class="text-gray-600">Mendalami ilmu komputer: jaringan, hardware, dan pengembangan aplikasi.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center hover:shadow-lg transition">
+                    <i class="fas fa-road text-4xl text-blue-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Konstruksi Jalan, Irigasi, dan Jembatan</h3>
+                    <h5 class="text-md font-bold text-gray-500 mb-3">(4 Tahun)</h5>
+
+                    <p class="text-gray-600">Fokus pada pembangunan infrastruktur jalan, irigasi, dan jembatan.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center hover:shadow-lg transition">
+                    <i class="fas fa-building text-4xl text-blue-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Konstruksi Gedung dan Sanitasi</h3>
+                    <h5 class="text-md font-bold text-gray-500 mb-3">(4 Tahun)</h5>
+
+                    <p class="text-gray-600">Mempelajari desain, konstruksi gedung, dan sistem sanitasi.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center hover:shadow-lg transition">
+                    <i class="fas fa-tools text-4xl text-blue-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Teknik Fabrikasi Logam dan Manufaktur
+                    </h3>
+                                        <h5 class="text-md font-bold text-gray-500 mb-3">(4 Tahun)</h5>
+                    <p class="text-gray-600">Spesialisasi dalam fabrikasi logam dan proses manufaktur.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center hover:shadow-lg transition">
+                    <i class="fas fa-car text-4xl text-blue-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Teknik Kendaraan Ringan</h3>
+                                        <h5 class="text-md font-bold text-gray-500 mb-3">(3 Tahun)</h5>
+
+                    <p class="text-gray-600">Pelatihan perawatan dan perbaikan kendaraan ringan.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center hover:shadow-lg transition">
+                    <i class="fas fa-bolt text-4xl text-blue-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Teknik Instalasi Tenaga Listrik</h3>
+                                        <h5 class="text-md font-bold text-gray-500 mb-3">(3 Tahun)</h5>
+
+                    <p class="text-gray-600">Mempelajari instalasi dan pemeliharaan sistem kelistrikan.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center hover:shadow-lg transition">
+                    <i class="fas fa-satellite-dish text-4xl text-blue-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Teknik Elektronika Komunikasi</h3>
+                                        <h5 class="text-md font-bold text-gray-500 mb-3">(3 Tahun)</h5>
+                    <p class="text-gray-600">Fokus pada sistem elektronik dan teknologi komunikasi.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center hover:shadow-lg transition">
+                    <i class="fas fa-robot text-4xl text-blue-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Teknik Mekatronika</h3>
+                                        <h5 class="text-md font-bold text-gray-500 mb-3">(3 Tahun)</h5>
+                    <p class="text-gray-600">Kombinasi mekanik, elektronik, dan otomasi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lookbook Section -->
+    <section id="lookbook" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-gray-800 text-center mb-8">Lookbook</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden">
+                    <img src="https://via.placeholder.com/400x300" alt="Lookbook Item" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Event Sekolah</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimoni Section -->
+    <section id="testimoni" class="bg-white py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-gray-800 text-center mb-8">Testimoni</h2>
+            <div class="max-w-2xl mx-auto bg-gray-50 p-6 rounded-lg shadow-md">
+                <p class="text-gray-600 italic">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+                    aspernatur veritatis voluptas distinctio aperiam et amet assumenda ut dolores."</p>
+                <div class="mt-4 text-right font-semibold text-gray-800">Vergil Sparda</ reproducible </div>
+                </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-gray-800 text-center mb-8">Contact Us</h2>
+            <div class="max-w-lg mx-auto">
+                <form class="space-y-4">
+                    <div>
+                        <label for="name" class="block text-gray-600 mb-1">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Fullname"
+                            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-600 mb-1">Email</label>
+                        <input type="email" id="email" name="email" placeholder="abc@gmail.com"
+                            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-gray-600 mb-1">Message</label>
+                        <textarea id="message" name="message" placeholder="Your message..."
+                            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 h-32"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2025 SMKN 7 Semarang. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
