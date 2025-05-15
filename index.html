@@ -51,13 +51,27 @@
         </div>
     </section>
 
-    <!-- About Section -->
+<!-- About Section -->
     <section id="about" class="py-16 bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-8">Tentang SMKN 7 Semarang</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-12">Tentang SMKN 7 Semarang 🗯️</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div class="order-2 md:order-1">
-                    <img src="assets/img/drone.png" alt="SMKN 7 Semarang Campus" class="w-full md:max-w-2xl h-80 md:h-80 object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="relative w-full md:max-w-lg h-64 md:h-64 mx-auto">
+                        <div class="carousel overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                            <div class="carousel-inner flex transition-transform duration-500 ease-in-out">
+                                <img src="assets/img/about1.jpg" alt="SMKN 7 Semarang Campus" class="w-full h-64 object-cover flex-shrink-0">
+                                <img src="assets/img/about2.jpg" alt="SMKN 7 Semarang Classroom" class="w-full h-64 object-cover flex-shrink-0">
+                                <img src="assets/img/about3.jpg" alt="SMKN 7 Semarang Students" class="w-full h-64 object-cover flex-shrink-0">
+                            </div>
+                            <button class="prev absolute left-0 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white p-2 rounded-full opacity-75 hover:opacity-100 transition-opacity" onclick="moveSlide(-1)">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="next absolute right-0 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white p-2 rounded-full opacity-75 hover:opacity-100 transition-opacity" onclick="moveSlide(1)">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
                 <div class="order-1 md:order-2">
                     <h3 class="text-2xl font-semibold text-blue-600 mb-4">Sekolah Vokasi Unggulan di Jawa Tengah</h3>
@@ -131,17 +145,46 @@
         </div>
     </section>
 
-    <!-- Lookbook Section -->
-    <section id="lookbook" class="py-16">
+   <!-- Lookbook Section -->
+    <section id="lookbook" class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-gray-800 text-center mb-8">Lookbook</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden">
-                    <img src="https://via.placeholder.com/400x300" alt="Lookbook Item" class="w-full h-48 object-cover">
+                    <img src="assets/img/lookbook1.jpeg" alt="School Festival" class="w-full h-48 object-cover">
                     <div class="p-4">
-                        <h3 class="text-lg font-semibold text-gray-800">Event Sekolah</h3>
+                        <h2 class="text-lg font-semibold text-gray-800 mb-2">🎓Kelulusan Taruna STEMBA Tahun Ajaran 2024/2025</h2>
+                        <p class="text-gray-600 mb-4">A vibrant celebration of student talents and culture.</p>
+                        <button class="bg-blue-500 text-white px-4 py-2 rounded-full font-semibold hover:bg-blue-600 transition" onclick="openModal(0)">Read More</button>
                     </div>
                 </div>
+                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden">
+                    <img src="assets/img/lookbook2.jpeg" alt="Science Fair" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Science Fair 2024</h3>
+                        <p class="text-gray-600 mb-4">Showcasing innovative student projects in technology.</p>
+                        <button class="bg-blue-500 text-white px-4 py-2 rounded-full font-semibold hover:bg-blue-600 transition" onclick="openModal(1)">Read More</button>
+                    </div>
+                </div>
+                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden">
+                    <img src="assets/img/lookbook3.jpg" alt="Career Day" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Career Day 2024</h3>
+                        <p class="text-gray-600 mb-4">Connecting students with industry professionals.</p>
+                        <button class="bg-blue-500 text-white px-4 py-2 rounded-full font-semibold hover:bg-blue-600 transition" onclick="openModal(2)">Read More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div id="lookbook-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+            <div class="bg-white rounded-lg max-w-3xl w-full mx-4 p-6 relative max-h-[90vh] overflow-y-auto">
+                <button class="absolute top-4 right-4 text-gray-600 hover:text-gray-800" onclick="closeModal()">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+                <img id="modal-image" src="" alt="Article Image" class="w-full h-64 object-cover rounded-lg mb-4">
+                <h3 id="modal-title" class="text-2xl font-bold text-gray-800 mb-4"></h3>
+                <div id="modal-content" class="text-gray-600"></div>
             </div>
         </div>
     </section>
@@ -191,6 +234,7 @@
             <p>© 2025 SMKN 7 Semarang. All rights reserved.</p>
         </div>
     </footer>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
