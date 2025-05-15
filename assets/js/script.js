@@ -1,8 +1,25 @@
-function toggleMenuIcon() {
+// Mobile Menu Toggle
+function toggleMenu() {
+    const menuContainer = document.getElementById('mobile-menu-container');
+    const menu = document.getElementById('mobile-menu');
     const icon = document.getElementById('menu-icon');
+    menuContainer.classList.toggle('hidden');
+    menu.classList.toggle('active');
     icon.classList.toggle('fa-bars');
     icon.classList.toggle('fa-times');
 }
+
+// Close menu when clicking outside
+document.getElementById('mobile-menu-container').addEventListener('click', (event) => {
+    if (event.target === document.getElementById('mobile-menu-container')) {
+        toggleMenu();
+    }
+});
+
+// Prevent clicks inside menu from closing it
+document.getElementById('mobile-menu').addEventListener('click', (event) => {
+    event.stopPropagation();
+});
 
 let currentSlide = 0;
 const slides = document.querySelectorAll('.carousel-inner img');
