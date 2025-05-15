@@ -11,10 +11,10 @@
 </head>
 
 <body class="bg-gray-100 font-sans">
-      <!-- Navbar -->
+    <!-- Navbar -->
     <header class="bg-white shadow sticky top-0 z-50">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold text-blue-600">SMKN 7 Semarang</div>
+            <div class="text-2xl font-bold text-blue-600">KabarStemba.</div>
             <nav class="hidden md:flex space-x-6">
                 <a href="#about" class="text-gray-600 hover:text-blue-500 transition">About</a>
                 <a href="#jurusan" class="text-gray-600 hover:text-blue-500 transition">Jurusan</a>
@@ -22,7 +22,8 @@
                 <a href="#testimoni" class="text-gray-600 hover:text-blue-500 transition">Testimoni</a>
                 <a href="#contact" class="text-gray-600 hover:text-blue-500 transition">Contact</a>
             </nav>
-            <button class="md:hidden text-gray-600 focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+            <button class="md:hidden text-gray-600 focus:outline-none"
+                onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
                 <i class="fas fa-2x" :class="menuOpen ? 'fa-times' : 'fa-bars'"></i>
             </button>
         </div>
@@ -51,23 +52,31 @@
         </div>
     </section>
 
-<!-- About Section -->
+    <!-- About Section -->
     <section id="about" class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-12">🔎 Tentang SMKN 7 Semarang</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div class="order-2 md:order-1">
                     <div class="relative w-full md:max-w-lg h-64 md:h-64 mx-auto">
-                        <div class="carousel overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div
+                            class="carousel overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
                             <div class="carousel-inner flex transition-transform duration-500 ease-in-out">
-                                <img src="assets/img/about1.jpg" alt="SMKN 7 Semarang Campus" class="w-full h-64 object-cover flex-shrink-0">
-                                <img src="assets/img/about2.jpg" alt="SMKN 7 Semarang Classroom" class="w-full h-64 object-cover flex-shrink-0">
-                                <img src="assets/img/about3.jpg" alt="SMKN 7 Semarang Students" class="w-full h-64 object-cover flex-shrink-0">
+                                <img src="assets/img/about1.jpg" alt="SMKN 7 Semarang Campus"
+                                    class="w-full h-64 object-cover flex-shrink-0">
+                                <img src="assets/img/about2.jpg" alt="SMKN 7 Semarang Classroom"
+                                    class="w-full h-64 object-cover flex-shrink-0">
+                                <img src="assets/img/about3.jpg" alt="SMKN 7 Semarang Students"
+                                    class="w-full h-64 object-cover flex-shrink-0">
                             </div>
-                            <button class="prev absolute left-0 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white p-2 rounded-full opacity-75 hover:opacity-100 transition-opacity" onclick="moveSlide(-1)">
+                            <button
+                                class="prev absolute left-0 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white p-2 rounded-full opacity-75 hover:opacity-100 transition-opacity"
+                                onclick="moveSlide(-1)">
                                 <i class="fas fa-chevron-left"></i>
                             </button>
-                            <button class="next absolute right-0 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white p-2 rounded-full opacity-75 hover:opacity-100 transition-opacity" onclick="moveSlide(1)">
+                            <button
+                                class="next absolute right-0 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white p-2 rounded-full opacity-75 hover:opacity-100 transition-opacity"
+                                onclick="moveSlide(1)">
                                 <i class="fas fa-chevron-right"></i>
                             </button>
                         </div>
@@ -75,9 +84,15 @@
                 </div>
                 <div class="order-1 md:order-2 px-24">
                     <h2 class="text-2xl font-semibold text-blue-600 mb-4">Sekolah Vokasi Unggulan di Jawa Tengah ✨</h2>
-                    <p class=" text-gray-600 mb-4">SMKN 7 Semarang adalah pusat pendidikan kejuruan terkemuka yang berkomitmen mencetak lulusan siap kerja dan berdaya saing global. Dengan fasilitas modern, kurikulum berbasis industri, dan tenaga pengajar berpengalaman, kami menawarkan pengalaman belajar yang inspiratif dan praktis.</p>
-                    <p class="text-gray-600 mb-6">Bergabunglah dengan kami untuk mengembangkan keterampilan teknis dan karakter unggul, siap menghadapi tantangan dunia kerja di era industri 4.0!</p>
-                    <a href="#contact" class="inline-block bg-blue-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-600 transition duration-300">Pelajari Lebih Lanjut</a>
+                    <p class=" text-gray-600 mb-4">SMKN 7 Semarang adalah pusat pendidikan kejuruan terkemuka yang
+                        berkomitmen mencetak lulusan siap kerja dan berdaya saing global. Dengan fasilitas modern,
+                        kurikulum berbasis industri, dan tenaga pengajar berpengalaman, kami menawarkan pengalaman
+                        belajar yang inspiratif dan praktis.</p>
+                    <p class="text-gray-600 mb-6">Bergabunglah dengan kami untuk mengembangkan keterampilan teknis dan
+                        karakter unggul, siap menghadapi tantangan dunia kerja di era industri 4.0!</p>
+                    <a href="#contact"
+                        class="inline-block bg-blue-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-600 transition duration-300">Pelajari
+                        Lebih Lanjut</a>
                 </div>
             </div>
         </div>
@@ -112,47 +127,48 @@
                     <i class="fas fa-tools text-4xl text-blue-500 mb-4"></i>
                     <h3 class="text-xl font-semibold text-gray-800 mb-3">Teknik Fabrikasi Logam dan Manufaktur
                     </h3>
-                                        <h5 class="text-md font-bold text-gray-500 mb-3">(4 Tahun)</h5>
+                    <h5 class="text-md font-bold text-gray-500 mb-3">(4 Tahun)</h5>
                     <p class="text-gray-600">Spesialisasi dalam fabrikasi logam dan proses manufaktur.</p>
                 </div>
                 <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center hover:shadow-lg transition">
                     <i class="fas fa-car text-4xl text-blue-500 mb-4"></i>
                     <h3 class="text-xl font-semibold text-gray-800 mb-3">Teknik Kendaraan Ringan</h3>
-                                        <h5 class="text-md font-bold text-gray-500 mb-3">(3 Tahun)</h5>
+                    <h5 class="text-md font-bold text-gray-500 mb-3">(3 Tahun)</h5>
 
                     <p class="text-gray-600">Pelatihan perawatan dan perbaikan kendaraan ringan.</p>
                 </div>
                 <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center hover:shadow-lg transition">
                     <i class="fas fa-bolt text-4xl text-blue-500 mb-4"></i>
                     <h3 class="text-xl font-semibold text-gray-800 mb-3">Teknik Instalasi Tenaga Listrik</h3>
-                                        <h5 class="text-md font-bold text-gray-500 mb-3">(3 Tahun)</h5>
+                    <h5 class="text-md font-bold text-gray-500 mb-3">(3 Tahun)</h5>
 
                     <p class="text-gray-600">Mempelajari instalasi dan pemeliharaan sistem kelistrikan.</p>
                 </div>
                 <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center hover:shadow-lg transition">
                     <i class="fas fa-satellite-dish text-4xl text-blue-500 mb-4"></i>
                     <h3 class="text-xl font-semibold text-gray-800 mb-3">Teknik Elektronika Komunikasi</h3>
-                                        <h5 class="text-md font-bold text-gray-500 mb-3">(3 Tahun)</h5>
+                    <h5 class="text-md font-bold text-gray-500 mb-3">(3 Tahun)</h5>
                     <p class="text-gray-600">Fokus pada sistem elektronik dan teknologi komunikasi.</p>
                 </div>
                 <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center hover:shadow-lg transition">
                     <i class="fas fa-robot text-4xl text-blue-500 mb-4"></i>
                     <h3 class="text-xl font-semibold text-gray-800 mb-3">Teknik Mekatronika</h3>
-                                        <h5 class="text-md font-bold text-gray-500 mb-3">(3 Tahun)</h5>
+                    <h5 class="text-md font-bold text-gray-500 mb-3">(3 Tahun)</h5>
                     <p class="text-gray-600">Kombinasi mekanik, elektronik, dan otomasi.</p>
                 </div>
             </div>
         </div>
     </section>
 
-     <!-- Lookbook Section -->
+    <!-- Lookbook Section -->
     <section id="lookbook" class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-gray-800 text-center mb-8">📖 Lookbook</h2>
             <div id="lookbook-cards" class="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
         </div>
         <!-- Modal -->
-        <div id="lookbook-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+        <div id="lookbook-modal"
+            class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
             <div class="bg-white rounded-lg max-w-3xl w-full mx-4 p-6 relative max-h-[90vh] overflow-y-auto">
                 <button class="absolute top-4 right-4 m-2 text-gray-600 hover:text-gray-800" onclick="closeModal()">
                     <i class="fas fa-times text-2xl"></i>
@@ -175,7 +191,7 @@
         </div>
     </section>
 
-<!-- Contact Section -->
+    <!-- Contact Section -->
     <section id="contact" class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-gray-800 text-center mb-12">📞Contact Us</h2>
@@ -183,13 +199,9 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <!-- Google Maps Iframe -->
                     <div class="w-full max-w-xl mx-auto">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.947093490827!2d110.41649161477345!3d-6.983698394964121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708b4e8b8e6b7b%3A0x7e4c3b7b8f6d9c8e!2sSMK%20Negeri%207%20Semarang!5e0!3m2!1sen!2sid!4v1697581234567!5m2!1sen!2sid" 
-                            width="100%" 
-                            height="300" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.947093490827!2d110.41649161477345!3d-6.983698394964121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708b4e8b8e6b7b%3A0x7e4c3b7b8f6d9c8e!2sSMK%20Negeri%207%20Semarang!5e0!3m2!1sen!2sid!4v1697581234567!5m2!1sen!2sid"
+                            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
                     </div>
@@ -198,17 +210,21 @@
                         <form class="space-y-4">
                             <div>
                                 <label for="name" class="block text-gray-600 mb-1">Name</label>
-                                <input type="text" id="name" name="name" required placeholder="Fullname" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <input type="text" id="name" name="name" required placeholder="Fullname"
+                                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                             </div>
                             <div>
                                 <label for="email" class="block text-gray-600 mb-1">Email</label>
-                                <input type="email" id="email" name="email" required placeholder="abc@gmail.com" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <input type="email" id="email" name="email" required placeholder="abc@gmail.com"
+                                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                             </div>
                             <div>
                                 <label for="message" class="block text-gray-600 mb-1">Message</label>
-                                <textarea id="message" name="message" required placeholder="Your message..." class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 h-32"></textarea>
+                                <textarea id="message" name="message" required placeholder="Your message..."
+                                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 h-32"></textarea>
                             </div>
-                            <button type="submit" class="w-full bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition">Send</button>
+                            <button type="submit"
+                                class="w-full bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition">Send</button>
                         </form>
                     </div>
                 </div>
@@ -238,9 +254,26 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
+    <footer class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-8">
         <div class="container mx-auto px-4 text-center">
-            <p>© 2025 SMKN 7 Semarang. All rights reserved.</p>
+            <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+            <div class="flex justify-center space-x-4 mb-4">
+                <a href="https://instagram.com/smknegeri7semarang" target="_blank"
+                    class="text-2xl hover:text-yellow-400 hover:scale-110 transition transform">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/62248311532" target="_blank"
+                    class="text-2xl hover:text-yellow-400 hover:scale-110 transition transform">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="mailto:info@smkn7semarang.sch.id"
+                    class="text-2xl hover:text-yellow-400 hover:scale-110 transition transform">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <div class="mt-5 text-center border-t border-white/20 pt-4">
+                <p class="text-sm">© 2025 KabarStemba. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
     <script src="assets/js/script.js"></script>
