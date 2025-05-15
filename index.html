@@ -145,36 +145,11 @@
         </div>
     </section>
 
-   <!-- Lookbook Section -->
+     <!-- Lookbook Section -->
     <section id="lookbook" class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-gray-800 text-center mb-8">Lookbook</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden">
-                    <img src="assets/img/lookbook1.jpeg" alt="School Festival" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h2 class="text-lg font-semibold text-gray-800 mb-2">🎓Kelulusan Taruna STEMBA Tahun Ajaran 2024/2025</h2>
-                        <p class="text-gray-600 mb-4">A vibrant celebration of student talents and culture.</p>
-                        <button class="bg-blue-500 text-white px-4 py-2 rounded-full font-semibold hover:bg-blue-600 transition" onclick="openModal(0)">Read More</button>
-                    </div>
-                </div>
-                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden">
-                    <img src="assets/img/lookbook2.jpeg" alt="Science Fair" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Science Fair 2024</h3>
-                        <p class="text-gray-600 mb-4">Showcasing innovative student projects in technology.</p>
-                        <button class="bg-blue-500 text-white px-4 py-2 rounded-full font-semibold hover:bg-blue-600 transition" onclick="openModal(1)">Read More</button>
-                    </div>
-                </div>
-                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden">
-                    <img src="assets/img/lookbook3.jpg" alt="Career Day" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Career Day 2024</h3>
-                        <p class="text-gray-600 mb-4">Connecting students with industry professionals.</p>
-                        <button class="bg-blue-500 text-white px-4 py-2 rounded-full font-semibold hover:bg-blue-600 transition" onclick="openModal(2)">Read More</button>
-                    </div>
-                </div>
-            </div>
+            <div id="lookbook-cards" class="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
         </div>
         <!-- Modal -->
         <div id="lookbook-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
@@ -182,8 +157,9 @@
                 <button class="absolute top-4 right-4 text-gray-600 hover:text-gray-800" onclick="closeModal()">
                     <i class="fas fa-times text-2xl"></i>
                 </button>
-                <img id="modal-image" src="" alt="Article Image" class="w-full h-64 object-cover rounded-lg mb-4">
-                <h3 id="modal-title" class="text-2xl font-bold text-gray-800 mb-4"></h3>
+                <img id="modal-image" src="" alt="Article Image" class="w-full h-64 object-cover rounded-lg mb-4 mt-10">
+                <h3 id="modal-title" class="text-2xl font-bold text-gray-800 mb-1"></h3>
+                <div id="modal-labels" class="flex justify-end flex-wrap my-4"></div>
                 <div id="modal-content" class="text-gray-600"></div>
             </div>
         </div>

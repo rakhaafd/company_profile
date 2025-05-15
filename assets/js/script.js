@@ -1,95 +1,121 @@
-// Mobile Menu Toggle
-function toggleMenuIcon() {
-    const icon = document.getElementById('menu-icon');
-    icon.classList.toggle('fa-bars');
-    icon.classList.toggle('fa-times');
-}
+        // Mobile Menu Toggle
+        function toggleMenuIcon() {
+            const icon = document.getElementById('menu-icon');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        }
 
-// Carousel Functionality
-let currentSlide = 0;
-const slides = document.querySelectorAll('.carousel-inner img');
-const totalSlides = slides.length;
+        // Carousel Functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-inner img');
+        const totalSlides = slides.length;
 
-function moveSlide(direction) {
-    currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
-    const offset = -currentSlide * 100;
-    document.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
-}
+        function moveSlide(direction) {
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+            const offset = -currentSlide * 100;
+            document.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
+        }
 
-// Swipe Support for Carousel
-let touchStartX = 0;
-let touchEndX = 0;
+        // Swipe Support for Carousel
+        let touchStartX = 0;
+        let touchEndX = 0;
 
-document.querySelector('.carousel').addEventListener('touchstart', (e) => {
-    touchStartX = e.changedTouches[0].screenX;
-});
+        document.querySelector('.carousel').addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
 
-document.querySelector('.carousel').addEventListener('touchend', (e) => {
-    touchEndX = e.changedTouches[0].screenX;
-    if (touchStartX - touchEndX > 50) {
-        moveSlide(1); // Swipe left, next slide
-    } else if (touchEndX - touchStartX > 50) {
-        moveSlide(-1); // Swipe right, previous slide
-    }
-});
+        document.querySelector('.carousel').addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            if (touchStartX - touchEndX > 50) {
+                moveSlide(1); // Swipe left, next slide
+            } else if (touchEndX - touchStartX > 50) {
+                moveSlide(-1); // Swipe right, previous slide
+            }
+        });
 
-// Modal Functionality
-const articles = [
-    {
-        image: 'assets/img/lookbook1.jpeg',
-        title: '🎓Kelulusan Taruna STEMBA Tahun Ajaran 2024/2025',
-        content: `
-                    <p class="mb-4">Setelah menempuh perjalanan panjang selama tiga tahun, para taruna akhirnya sampai pada titik akhir dari fase pendidikan menengah kejuruan mereka di SMKN 7 Semarang. Penuh perjuangan, kerja keras, tawa, bahkan air mata, semua momen itu kini menjadi kenangan indah yang akan terus terpatri dalam hati setiap lulusan. 🙌</p>
-<br>
-<p class="mb-4">📘 Perjalanan di STEMBA bukan hanya soal pelajaran di dalam kelas, tapi juga tentang membentuk karakter, membangun semangat kebersamaan, dan menemukan jati diri. Dari proyek-proyek kreatif, praktik industri, hingga pengalaman organisasi dan lomba-lomba yang menantang, setiap taruna telah mengasah potensi terbaiknya. Dukungan dari para guru yang luar biasa, orang tua yang selalu mendoakan, serta teman seperjuangan yang senantiasa hadir, menjadi kekuatan utama di balik kelulusan ini. 🤝</p>
-<br>
-<p class="mb-4">🚀 Kini, langkah baru siap dimulai. Bagi yang melanjutkan pendidikan, semoga terus semangat belajar dan mengembangkan diri. Bagi yang langsung terjun ke dunia kerja, semoga ilmu yang dibawa dari STEMBA menjadi modal berharga untuk berkontribusi nyata. Dan bagi semua lulusan, jadilah pribadi yang rendah hati, tangguh, serta membawa nilai-nilai positif di mana pun berada. Dunia menanti karya kalian! 🌍✨</p>
-<br>
-<p class="mb-4">🎉 Selamat dan sukses untuk Taruna STEMBA Angkatan 2024/2025! Ini bukan akhir, melainkan awal dari petualangan yang lebih besar. Teruslah melangkah dengan keyakinan, dan jangan lupa bahwa kalian adalah bagian dari keluarga besar SMKN 7 Semarang yang selalu bangga akan pencapaian kalian. 💙🦅</p>
+        // Cache for fetched articles
+        let cachedArticles = [];
 
-                `
-    },
-    {
-        image: 'assets/img/lookbook2.jpeg',
-        title: 'Science Fair 2024',
-        content: `
-                    <p class="mb-4">The Science Fair 2024 was a highlight of the academic year at SMKN 7 Semarang, where students showcased their innovative projects in technology and engineering. From robotics to renewable energy models, the fair demonstrated the technical prowess and creativity of our students.</p>
-                    <p class="mb-4">Judges from local industries and universities evaluated the projects, providing valuable feedback and awarding top prizes in categories such as Best Innovation and Most Practical Application. The event also featured workshops led by industry professionals, offering insights into the latest technological advancements.</p>
-                    <p>The Science Fair not only encouraged scientific exploration but also bridged the gap between classroom learning and real-world applications, preparing students for future careers in STEM fields.</p>
-                `
-    },
-    {
-        image: 'assets/img/lookbook3.jpg',
-        title: 'Career Day 2024',
-        content: `
-                    <p class="mb-4">Career Day 2024 at SMKN 7 Semarang brought together students and industry professionals for a day of inspiration and guidance. Representatives from leading companies in IT, construction, automotive, and electronics shared their expertise through talks and interactive sessions.</p>
-                    <p class="mb-4">Students had the opportunity to participate in mock interviews, career counseling, and networking sessions, gaining insights into the skills and qualifications needed for various professions. The event also included a job fair where local companies offered internships and apprenticeships to outstanding students.</p>
-                    <p>Career Day underscored SMKN 7 Semarang's commitment to preparing students for the workforce, equipping them with the knowledge and connections to succeed in their chosen fields.</p>
-                `
-    }
-];
+        // Helper function to extract the first paragraph
+        function getFirstParagraph(content) {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(content, 'text/html');
+            const firstP = doc.querySelector('p');
+            return firstP ? firstP.textContent : '';
+        }
 
-function openModal(index) {
-    const modal = document.getElementById('lookbook-modal');
-    const modalImage = document.getElementById('modal-image');
-    const modalTitle = document.getElementById('modal-title');
-    const modalContent = document.getElementById('modal-content');
+        // Dynamically render Lookbook cards
+        function renderLookbookCards(articles) {
+            const container = document.getElementById('lookbook-cards');
+            container.innerHTML = ''; // Clear existing cards
+            articles.forEach((article, index) => {
+                const card = document.createElement('div');
+                card.className = 'bg-gray-50 rounded-lg shadow-md overflow-hidden';
+                card.innerHTML = `
+                    <img src="${article.image}" alt="${article.title}" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-5">${article.title}</h3>
+                        <div class="flex justify-end flex-wrap mb-5">
+                            ${article.labels.map(label => `<span class="bg-blue-100 text-blue-700 px-2 py-1 rounded-full text-sm font-medium mr-1 mb-1">${label}</span>`).join('')}
+                        </div>
+                        <p class="text-gray-600 mb-4 line-clamp-3">${getFirstParagraph(article.content)}</p>
+                        <button class="bg-blue-500 text-white px-4 py-2 rounded-full font-semibold hover:bg-blue-600 transition" onclick="openModal(${index})">Read More</button>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
 
-    modalImage.src = articles[index].image;
-    modalTitle.textContent = articles[index].title;
-    modalContent.innerHTML = articles[index].content;
+        function openModal(index) {
+            if (cachedArticles.length > 0) {
+                const modal = document.getElementById('lookbook-modal');
+                const modalImage = document.getElementById('modal-image');
+                const modalTitle = document.getElementById('modal-title');
+                const modalLabels = document.getElementById('modal-labels');
+                const modalContent = document.getElementById('modal-content');
 
-    modal.classList.remove('hidden');
-}
+                modalImage.src = cachedArticles[index].image;
+                modalTitle.textContent = cachedArticles[index].title;
+                modalLabels.innerHTML = '';
+                cachedArticles[index].labels.forEach(label => {
+                    const labelSpan = document.createElement('span');
+                    labelSpan.className = 'bg-blue-100 text-blue-700 px-2 py-1 rounded-full text-sm font-medium mr-2 mb-2';
+                    labelSpan.textContent = label;
+                    modalLabels.appendChild(labelSpan);
+                });
+                modalContent.innerHTML = cachedArticles[index].content;
 
-function closeModal() {
-    const modal = document.getElementById('lookbook-modal');
-    modal.classList.add('hidden');
-}
+                modal.classList.remove('hidden');
+            } else {
+                console.error('No articles available');
+            }
+        }
 
-// Close modal when clicking outside the modal content
-document.getElementById('lookbook-modal').addEventListener('click', (event) => {
-    if (event.target === document.getElementById('lookbook-modal')) {
-        closeModal();
-    }
-});
+        function closeModal() {
+            const modal = document.getElementById('lookbook-modal');
+            modal.classList.add('hidden');
+        }
+
+        // Close modal when clicking outside the modal content
+        document.getElementById('lookbook-modal').addEventListener('click', (event) => {
+            if (event.target === document.getElementById('lookbook-modal')) {
+                closeModal();
+            }
+        });
+
+        // Fetch and render articles on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('public/data/articles.json')
+                .then(response => {
+                    if (!response.ok) throw new Error('Failed to fetch articles');
+                    return response.json();
+                })
+                .then(data => {
+                    cachedArticles = data;
+                    renderLookbookCards(data);
+                })
+                .catch(error => {
+                    console.error('Error loading articles:', error);
+                    renderLookbookCards([]); // Render no cards if fetch fails
+                });
+        });
