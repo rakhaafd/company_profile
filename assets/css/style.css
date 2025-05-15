@@ -5,3 +5,52 @@
 * {
     font-family: Quicksand;
 }
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.carousel-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    width: calc(100% * 2);
+    /* Double width to accommodate duplicated cards */
+    animation: slide 15s linear infinite;
+    gap: 1.5rem;
+}
+
+.carousel-track:hover {
+    animation-play-state: paused;
+    /* Pause on hover */
+}
+
+.carousel-track .testimonial-card {
+    flex: 0 0 100%;
+    /* Each card takes full container width */
+    max-width: 32rem;
+    /* max-w-lg */
+    margin: 0 auto;
+    /* Center cards horizontally */
+}
+
+@media (min-width: 768px) {
+    .carousel-track .testimonial-card {
+        flex: 0 0 50%;
+        /* Two cards visible on medium screens */
+    }
+
+    .carousel-track {
+        width: calc(50% * 2);
+        /* Adjust for two cards */
+    }
+}
