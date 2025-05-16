@@ -66,8 +66,8 @@ function renderJurusanCards(jurusan) {
                 card.innerHTML = `
                     <i class="fas ${item.icon} text-4xl text-blue-500 mb-4"></i>
                     <h3 class="text-xl font-semibold text-gray-800 mb-3">${item.title}</h3>
-                    <h5 class="text-md font-bold text-gray-500 mb-3">(${item.duration})</h5>
-                    <p class="text-gray-600">${item.description}</p>
+                    <h5 class="text-lg font-bold text-gray-500 mb-3">(${item.duration})</h5>
+                    <p class="text-gray-600 text-md">${item.description}</p>
                 `;
                 container.appendChild(card);
             });
