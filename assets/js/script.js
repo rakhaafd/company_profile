@@ -1,4 +1,3 @@
-// Mobile Menu Toggle
 function toggleMenu() {
     const menuContainer = document.getElementById('mobile-menu-container');
     const menu = document.getElementById('mobile-menu');
@@ -49,6 +48,7 @@ document.querySelector('.carousel').addEventListener('touchend', (e) => {
 
 let cachedArticles = [];
 let cachedTestimonials = [];
+let cachedJurusan = [];
 
 function getFirstParagraph(content) {
     const parser = new DOMParser();
@@ -56,6 +56,22 @@ function getFirstParagraph(content) {
     const firstP = doc.querySelector('p');
     return firstP ? firstP.textContent : '';
 }
+
+function renderJurusanCards(jurusan) {
+            const container = document.getElementById('jurusan-cards');
+            container.innerHTML = ''; // Clear existing cards
+            jurusan.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'bg-gray-50 p-6 rounded-lg shadow-md text-center hover:shadow-lg transition';
+                card.innerHTML = `
+                    <i class="fas ${item.icon} text-4xl text-blue-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">${item.title}</h3>
+                    <h5 class="text-md font-bold text-gray-500 mb-3">(${item.duration})</h5>
+                    <p class="text-gray-600">${item.description}</p>
+                `;
+                container.appendChild(card);
+            });
+        }
 
 function renderLookbookCards(articles) {
     const container = document.getElementById('lookbook-cards');
@@ -139,6 +155,21 @@ function renderTestimoniCards(testimonials) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Fetch jurusan
+    fetch('public/data/jurusan.json')
+        .then(response => {
+            if (!response.ok) throw new Error('Failed to fetch jurusan');
+            return response.json();
+        })
+        .then(data => {
+            cachedJurusan = data;
+            renderJurusanCards(data);
+        })
+        .catch(error => {
+            console.error('Error loading jurusan:', error);
+            renderJurusanCards([]);
+        });
+
     // Fetch articles
     fetch('public/data/articles.json')
         .then(response => {

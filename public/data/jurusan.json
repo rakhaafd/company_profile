@@ -1,0 +1,50 @@
+[
+    {
+        "icon": "fa-laptop-code",
+        "title": "Sistem Informasi, Jaringan, dan Aplikasi",
+        "duration": "4 Tahun",
+        "description": "Mendalami ilmu komputer: jaringan, hardware, dan pengembangan aplikasi."
+    },
+    {
+        "icon": "fa-road",
+        "title": "Konstruksi Jalan, Irigasi, dan Jembatan",
+        "duration": "4 Tahun",
+        "description": "Fokus pada pembangunan infrastruktur jalan, irigasi, dan jembatan."
+    },
+    {
+        "icon": "fa-building",
+        "title": "Konstruksi Gedung dan Sanitasi",
+        "duration": "4 Tahun",
+        "description": "Mempelajari desain, konstruksi gedung, dan sistem sanitasi."
+    },
+    {
+        "icon": "fa-tools",
+        "title": "Teknik Fabrikasi Logam dan Manufaktur",
+        "duration": "4 Tahun",
+        "description": "Spesialisasi dalam fabrikasi logam dan proses manufaktur."
+    },
+    {
+        "icon": "fa-car",
+        "title": "Teknik Kendaraan Ringan",
+        "duration": "3 Tahun",
+        "description": "Pelatihan perawatan dan perbaikan kendaraan ringan."
+    },
+    {
+        "icon": "fa-bolt",
+        "title": "Teknik Instalasi Tenaga Listrik",
+        "duration": "3 Tahun",
+        "description": "Mempelajari instalasi dan pemeliharaan sistem kelistrikan."
+    },
+    {
+        "icon": "fa-satellite-dish",
+        "title": "Teknik Elektronika Komunikasi",
+        "duration": "3 Tahun",
+        "description": "Fokus pada sistem elektronik dan teknologi komunikasi."
+    },
+    {
+        "icon": "fa-robot",
+        "title": "Teknik Mekatronika",
+        "duration": "3 Tahun",
+        "description": "Kombinasi mekanik, elektronik, dan otomasi."
+    }
+]
