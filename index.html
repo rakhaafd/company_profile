@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KabarStemba. </title>
+    <title>KabarStemba.</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-<link rel="icon" type="image/png" href="public/icon/icon.png">
+    <link rel="icon" type="image/png" href="public/icon/icon.png">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-
 <body class="bg-gray-100 font-sans">
-<!-- Navbar -->
+    <!-- Navbar -->
     <header class="bg-white shadow sticky top-0 z-50">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
             <div class="text-2xl font-bold text-blue-600"><a href="#about">KabarStemba.</a></div>
@@ -45,148 +45,121 @@
     </header>
 
     <!-- Hero Section with Background Image -->
-    <section class="hero relative bg-cover bg-center py-20"
-        style="background-image: url('https://cdn-sdotid.adg.id/images/a08a54a4-0e94-45f9-af3a-613db3c755fc_980x382.webp.jpeg')">
+    <section class="hero relative bg-cover bg-center py-20" style="background-image: url('https://cdn-sdotid.adg.id/images/a08a54a4-0e94-45f9-af3a-613db3c755fc_980x382.webp.jpeg')" data-aos="fade-up" data-aos-duration="1000">
         <div class="absolute inset-0 bg-gradient-to-r from-blue-500/70 to-indigo-600/70"></div>
         <div class="container mx-auto px-3 lg:px-20 text-center relative z-10">
-            <h1 class="text-4xl md:text-5xl font-bold text-white mb-8">Welcome to SMKN 7 Semarang 🏫</h1>
-            <p class="text-lg md:text-xl text-white mb-8">SMK Negeri 7 Semarang adalah sekolah kejuruan yang berfokus
-                pada pembentukan generasi profesional, siap kerja, dan berkarakter. Dengan kurikulum berbasis industri
-                dan lingkungan belajar yang inspiratif, kami siap mengantarkan siswa menuju masa depan gemilang. ✨</p>
-            <a class="bg-yellow-400 text-gray-800 px-6 py-3 rounded-full font-semibold hover:bg-yellow-500 transition"
-                href="#contact">Get in Touch 🚀</a>
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-8" data-aos="fade-up" data-aos-delay="100">Welcome to SMKN 7 Semarang 🏫</h1>
+            <p class="text-lg md:text-xl text-white mb-8" data-aos="fade-up" data-aos-delay="200">SMK Negeri 7 Semarang adalah sekolah kejuruan yang berfokus pada pembentukan generasi profesional, siap kerja, dan berkarakter. Dengan kurikulum berbasis industri dan lingkungan belajar yang inspiratif, kami siap mengantarkan siswa menuju masa depan gemilang. ✨</p>
+            <a class="bg-yellow-400 text-gray-800 px-6 py-3 rounded-full font-semibold hover:bg-yellow-500 transition" href="#contact" data-aos="fade-up" data-aos-delay="300">Get in Touch 🚀</a>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-16 bg-white">
+    <section id="about" class="py-16 bg-white" data-aos="fade-up" data-aos-duration="1000">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-12">🔎 Tentang SMKN 7 Semarang</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-12" data-aos="fade-up" data-aos-delay="100">🔎 Tentang SMKN 7 Semarang</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                <div class="order-2 md:order-1">
+                <div class="order-2 md:order-1" data-aos="fade-right" data-aos-delay="200">
                     <div class="relative w-full md:max-w-lg h-64 md:h-64 mx-auto">
-                        <div
-                            class="carousel overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div class="carousel overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
                             <div class="carousel-inner flex transition-transform duration-500 ease-in-out">
-                                <img src="assets/img/about1.jpg" alt="SMKN 7 Semarang Campus"
-                                    class="w-full h-64 object-cover flex-shrink-0">
-                                <img src="assets/img/about2.jpg" alt="SMKN 7 Semarang Classroom"
-                                    class="w-full h-64 object-cover flex-shrink-0">
-                                <img src="assets/img/about3.jpg" alt="SMKN 7 Semarang Students"
-                                    class="w-full h-64 object-cover flex-shrink-0">
+                                <img src="assets/img/about1.jpg" alt="SMKN 7 Semarang Campus" class="w-full h-64 object-cover flex-shrink-0">
+                                <img src="assets/img/about2.jpg" alt="SMKN 7 Semarang Classroom" class="w-full h-64 object-cover flex-shrink-0">
+                                <img src="assets/img/about3.jpg" alt="SMKN 7 Semarang Students" class="w-full h-64 object-cover flex-shrink-0">
                             </div>
-                            <button
-                                class="prev absolute left-0 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white p-2 rounded-full opacity-75 hover:opacity-100 transition-opacity"
-                                onclick="moveSlide(-1)">
+                            <button class="prev absolute left-0 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white p-2 rounded-full opacity-75 hover:opacity-100 transition-opacity" onclick="moveSlide(-1)">
                                 <i class="fas fa-chevron-left"></i>
                             </button>
-                            <button
-                                class="next absolute right-0 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white p-2 rounded-full opacity-75 hover:opacity-100 transition-opacity"
-                                onclick="moveSlide(1)">
+                            <button class="next absolute right-0 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white p-2 rounded-full opacity-75 hover:opacity-100 transition-opacity" onclick="moveSlide(1)">
                                 <i class="fas fa-chevron-right"></i>
                             </button>
                         </div>
                     </div>
                 </div>
-                <div class="order-1 md:order-2 px-0 lg:px-24">
+                <div class="order-1 md:order-2 px-0 lg:px-24" data-aos="fade-left" data-aos-delay="200">
                     <h3 class="text-3xl font-semibold text-blue-600 mb-8">Sekolah Vokasi Unggulan di Jawa Tengah ✨</h3>
-                    <p class=" text-gray-600 text-lg mb-4">SMKN 7 Semarang adalah pusat pendidikan kejuruan terkemuka yang
-                        berkomitmen mencetak lulusan siap kerja dan berdaya saing global. Dengan fasilitas modern,
-                        kurikulum berbasis industri, dan tenaga pengajar berpengalaman, kami menawarkan pengalaman
-                        belajar yang inspiratif dan praktis.</p>
-                    <p class="text-gray-600 mb-6 text-lg font-semibold">Bergabunglah dengan kami untuk mengembangkan keterampilan teknis dan
-                        karakter unggul, siap menghadapi tantangan dunia kerja di Era industri 4.0!</p>
-                    <a href="#contact"
-                        class="inline-block bg-blue-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-600 transition duration-300">Pelajari
-                        Lebih Lanjut ✈️</a>
+                    <p class="text-gray-600 text-lg mb-4">SMKN 7 Semarang adalah pusat pendidikan kejuruan terkemuka yang berkomitmen mencetak lulusan siap kerja dan berdaya saing global. Dengan fasilitas modern, kurikulum berbasis industri, dan tenaga pengajar berpengalaman, kami menawarkan pengalaman belajar yang inspiratif dan praktis.</p>
+                    <p class="text-gray-600 mb-6 text-lg font-semibold">Bergabunglah dengan kami untuk mengembangkan keterampilan teknis dan karakter unggul, siap menghadapi tantangan dunia kerja di Era industri 4.0!</p>
+                    <a href="#contact" class="inline-block bg-blue-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-600 transition duration-300">Pelajari Lebih Lanjut ✈️</a>
                 </div>
             </div>
         </div>
     </section>
 
-<!-- Jurusan Section -->
-    <section id="jurusan" class="bg-white py-16">
+    <!-- Jurusan Section -->
+    <section id="jurusan" class="bg-white py-16" data-aos="fade-up" data-aos-duration="1000">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-gray-800 text-center mb-8">🧑‍🏫 Jurusan di SMKN 7 Semarang</h2>
-            <div id="jurusan-cards" class="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+            <h2 class="text-3xl font-bold text-gray-800 text-center mb-8" data-aos="fade-up" data-aos-delay="100">🧑‍🏫 Jurusan di SMKN 7 Semarang</h2>
+            <div id="jurusan-cards" class="grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="zoom-in" data-aos-delay="200"></div>
         </div>
     </section>
 
     <!-- Lookbook Section -->
-    <section id="lookbook" class="bg-white">
+    <section id="lookbook" class="bg-white" data-aos="fade-up" data-aos-duration="1000">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="w-full"><path fill="#3b82f6" fill-opacity="1" d="M0,224L24,192C48,160,96,96,144,101.3C192,107,240,181,288,213.3C336,245,384,235,432,240C480,245,528,267,576,240C624,213,672,139,720,128C768,117,816,171,864,192C912,213,960,203,1008,176C1056,149,1104,107,1152,122.7C1200,139,1248,213,1296,202.7C1344,192,1392,96,1416,48L1440,0L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z"></path></svg>
         <div class="bg-blue-500">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-white text-center mb-8">📖 Lookbook</h2>
-            <div id="lookbook-cards" class="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
-        </div>
-        <!-- Modal -->
-        <div id="lookbook-modal"
-            class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
-            <div class="bg-white rounded-lg max-w-3xl w-full mx-4 p-6 relative max-h-[90vh] overflow-y-auto">
-                <button class="absolute top-4 right-4 m-2 text-gray-600 hover:text-gray-800" onclick="closeModal()">
-                    <i class="fas fa-times text-2xl"></i>
-                </button>
-                <img id="modal-image" src="" alt="Article Image" class="w-full h-64 object-cover rounded-lg mb-4 mt-10">
-                <h3 id="modal-title" class="text-2xl font-bold text-gray-800 mb-1"></h3>
-                <div id="modal-labels" class="flex justify-end flex-wrap my-4"></div>
-                <div id="modal-content" class="text-gray-600"></div>
+            <div class="container mx-auto">
+                <h2 class="text-3xl font-bold text-white text-center mb-8" data-aos="fade-up" data-aos-delay="100">📖 Lookbook</h2>
+                <div id="lookbook-cards" class="grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="zoom-in" data-aos-delay="200"></div>
             </div>
-        </div>
+            <!-- Modal -->
+            <div id="lookbook-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+                <div class="bg-white rounded-lg max-w-3xl w-full mx-4 p-6 relative max-h-[90vh] overflow-y-auto">
+                    <button class="absolute top-4 right-4 m-2 text-gray-600 hover:text-gray-800" onclick="closeModal()">
+                        <i class="fas fa-times text-2xl"></i>
+                    </button>
+                    <img id="modal-image" src="" alt="Article Image" class="w-full h-64 object-cover rounded-lg mb-4 mt-10">
+                    <h3 id="modal-title" class="text-2xl font-bold text-gray-800 mb-1"></h3>
+                    <div id="modal-labels" class="flex justify-end flex-wrap my-4"></div>
+                    <div id="modal-content" class="text-gray-600"></div>
+                </div>
+            </div>
         </div>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="w-full"><path fill="#3b82f6" fill-opacity="1" d="M0,224L24,192C48,160,96,96,144,101.3C192,107,240,181,288,213.3C336,245,384,235,432,240C480,245,528,267,576,240C624,213,672,139,720,128C768,117,816,171,864,192C912,213,960,203,1008,176C1056,149,1104,107,1152,122.7C1200,139,1248,213,1296,202.7C1344,192,1392,96,1416,48L1440,0L1440,0L1416,0C1392,0,1344,0,1296,0C1248,0,1200,0,1152,0C1104,0,1056,0,1008,0C960,0,912,0,864,0C816,0,768,0,720,0C672,0,624,0,576,0C528,0,480,0,432,0C384,0,336,0,288,0C240,0,192,0,144,0C96,0,48,0,24,0L0,0Z"></path></svg>
     </section>
 
     <!-- Testimoni Section -->
-    <section id="testimoni" class="bg-white py-16">
+    <section id="testimoni" class="bg-white py-16" data-aos="fade-up" data-aos-duration="1000">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-gray-800 text-center mb-8">Apa Kata Alumni ⁉️</h2>
-            <div class="carousel-container">
+            <h2 class="text-3xl font-bold text-gray-800 text-center mb-8" data-aos="fade-up" data-aos-delay="100">Apa Kata Alumni ⁉️</h2>
+            <div class="carousel-container" data-aos="zoom-in" data-aos-delay="200">
                 <div id="testimoni-cards" class="carousel-track"></div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-white">
+    <section id="contact" class="py-16 bg-white" data-aos="zoom-in" data-aos-duration="1000">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-gray-800 text-center mb-12">📞Contact Us</h2>
-            <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 text-center mb-12" data-aos="fade-up" data-aos-delay="100">📞Contact Us</h2>
+            <div class="mb-12" data-aos="fade-up" data-aos-delay="200">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <!-- Google Maps Iframe -->
                     <div class="w-full max-w-xl mx-auto">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.947093490827!2d110.41649161477345!3d-6.983698394964121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708b4e8b8e6b7b%3A0x7e4c3b7b8f6d9c8e!2sSMK%20Negeri%207%20Semarang!5e0!3m2!1sen!2sid!4v1697581234567!5m2!1sen!2sid"
-                            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.947093490827!2d110.41649161477345!3d-6.983698394964121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708b4e8b8e6b7b%3A0x7e4c3b7b8f6d9c8e!2sSMK%20Negeri%207%20Semarang!5e0!3m2!1sen!2sid!4v1697581234567!5m2!1sen!2sid" width="100%" height="300" style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <!-- Contact Form -->
                     <div class="w-full max-w-xl mx-auto">
                         <form class="space-y-4">
                             <div>
                                 <label for="name" class="block text-gray-600 mb-1">Name</label>
-                                <input type="text" id="name" name="name" required placeholder="Fullname"
-                                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <input type="text" id="name" name="name" required placeholder="Fullname" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                             </div>
                             <div>
                                 <label for="email" class="block text-gray-600 mb-1">Email</label>
-                                <input type="email" id="email" name="email" required placeholder="abc@gmail.com"
-                                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <input type="email" id="email" name="email" required placeholder="abc@gmail.com" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                             </div>
                             <div>
                                 <label for="message" class="block text-gray-600 mb-1">Message</label>
-                                <textarea id="message" name="message" required placeholder="Your message..."
-                                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 h-32"></textarea>
+                                <textarea id="message" name="message" required placeholder="Your message..." class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 h-32"></textarea>
                             </div>
-                            <button type="submit"
-                                class="w-full bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition">Send</button>
+                            <button type="submit" class="w-full bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition">Send</button>
                         </form>
                     </div>
                 </div>
             </div>
             <!-- Contact Information -->
-            <div class="max-w-7xl mx-auto">
+            <div class="max-w-7xl mx-auto" data-aos="fade-up" data-aos-delay="300">
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-gray-600">
                     <div class="flex items-center">
                         <i class="fas fa-map-marker-alt text-blue-500 text-xl mr-3"></i>
@@ -210,20 +183,17 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-8">
+    <footer class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-8" data-aos="zoom-in" data-aos-duration="1000">
         <div class="container mx-auto px-4 text-center">
             <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
             <div class="flex justify-center space-x-4 mb-4">
-                <a href="https://instagram.com/smknegeri7semarang" target="_blank"
-                    class="text-2xl hover:text-yellow-400 hover:scale-110 transition transform">
+                <a href="https://instagram.com/smknegeri7semarang" target="_blank" class="text-2xl hover:text-yellow-400 hover:scale-110 transition transform">
                     <i class="fab fa-instagram"></i>
                 </a>
-                <a href="https://wa.me/62248311532" target="_blank"
-                    class="text-2xl hover:text-yellow-400 hover:scale-110 transition transform">
+                <a href="https://wa.me/62248311532" target="_blank" class="text-2xl hover:text-yellow-400 hover:scale-110 transition transform">
                     <i class="fab fa-whatsapp"></i>
                 </a>
-                <a href="mailto:info@smkn7semarang.sch.id"
-                    class="text-2xl hover:text-yellow-400 hover:scale-110 transition transform">
+                <a href="mailto:info@smkn7semarang.sch.id" class="text-2xl hover:text-yellow-400 hover:scale-110 transition transform">
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
@@ -232,7 +202,9 @@
             </div>
         </div>
     </footer>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
-
 </html>
